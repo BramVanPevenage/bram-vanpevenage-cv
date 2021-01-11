@@ -12,7 +12,6 @@ main{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: space-between;
 }
 nav{
     text-align: center;
