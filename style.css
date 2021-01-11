@@ -28,9 +28,7 @@ nav{
 .box{
     background-color:#222222;
     box-shadow: 5px 10px 18px #222222;
-    width: 50vw;
     border-radius: 1.5rem;
-    height: 50vh;
     margin: 5rem;
 }
 .box:hover{
