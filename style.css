@@ -1,3 +1,8 @@
+* {
+	box-sizing: border-box; /* width and height include paddings and borders */
+	margin: 0; /* wipe out browser differences */
+	padding: 0; /* wipe out browser differences */ 
+}
 html{
     background: linear-gradient(45deg,  darkblue, purple , red);
     background-size: cover;
@@ -46,8 +51,10 @@ h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
 }
-h1::after{
-    
+h2::after{
+    color: red;
+    height: 10rem;
+    width: 10rem;
 }
 
 .material-icons{
@@ -95,7 +102,7 @@ h1::after{
 .blok{
     border-radius: 1rem;
     text-align: center;
-    box-shadow: 5px 10px 18px #161616;
+    box-shadow: 0.5rem 1.0rem 1.8rem #161616;
 }
 .programeertalen{
     display: grid;
@@ -136,6 +143,12 @@ h1::after{
 /* footer */
 footer{
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    padding: 0.7rem; 
+}
+footer:hover{
+    filter: blur(0px);
 }
 .githubIcon{
     max-width: 2rem;
