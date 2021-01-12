@@ -18,8 +18,34 @@ nav{
 }
 
 
+
+/* Scrollbar */ 
+body::-webkit-scrollbar-track {
+    background-image: linear-gradient(red, purple);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body::-webkit-scrollbar {
+    width: 0rem;
+
+}
+body::-webkit-scrollbar {
+    width: 5rem;
+
+}
+body::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb {
+    width: 5rem;
+}
+
+
+
+
+
 ::selection{
-    color: darkviolet;
+    color: blue;
 }
 
 .navUl li {
@@ -31,13 +57,12 @@ nav{
 }
 .box{
     background-color:#222222;
-    box-shadow: 5px 10px 18px #222222;
-    border-radius: 1.5rem;
+    box-shadow: 3px 7px 10px #222222;
+    border-radius: 1rem;
     margin: 5rem;
 }
 .box:hover{
-
-    box-shadow: 5px 10px 18px #222222;
+    box-shadow: 5px 10px 22px #222222;
 }
 .box h2{
     color: white;
@@ -62,6 +87,14 @@ h2::after{
 .material-icons:hover{
     color: rgba(94, 55, 200, 0.815);
 }
+
+
+
+
+
+
+
+
 
 /* programeer taal venster */
 .csharp{
@@ -101,7 +134,8 @@ h2::after{
 .blok{
     border-radius: 1rem;
     text-align: center;
-    box-shadow: 0.5rem 1.0rem 1.8rem #161616;
+    box-shadow: 0.5rem 1.0rem 1.8rem #0f0f0f;
+    padding: 1rem;
 }
 .programeertalen{
     display: grid;
@@ -112,29 +146,74 @@ h2::after{
     margin: 5rem;
 }
 
+
+
+
+
+
+
 /* me venster */
 .pffoto{
     border-radius: 10rem 10rem 20rem 20rem;
     max-width: 5rem;
+    margin: 1rem;
 }
 .bVlag{
     border-radius: 1rem 1rem 2rem 2rem;
     max-width: 1.1rem;
+    margin: 0.5rem;
 }
 .contentpersoonlijk{
     display: flex;
     flex-flow: row-reverse;
+    padding: 1rem;
 }
 .dot{
-    font-size: 4rem;
     color: red;
+}
+.ageDiv{
+    display: flex;
+    justify-content: space-between;
+}
+#myAgeProgress{
+    margin: 0.7rem 0.7rem 0.3rem 0rem;
+    width: 100%;
+    height: 9.5%;
+    background-color: rgb(116, 116, 116);
+    border-radius: 1.5rem;
+}
+#myBar{
+    border-radius: 1.5rem;
+    width: 10%;
+    height: 100%;
+    background-color: green;
+}
+#myAgeProgress:hover .tooltip{
+    height: 10%;
+    width: 10%;
+    background-color: green;
+}
+.tooltip{
+    text-decoration: none;
+    position: absolute;
+    border-radius:  1.5rem 1.5rem ;
+    color: white;
+    background-color: green;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 451ms;
+    box-shadow: rgba(0,0,0,0.5) 0.5em 0.5em 2em;
+    padding: 0.25rem 0.3rem;
 }
 
 
 
 
 
-
+/* Taal  */ 
+.taalcontent{
+    padding: 1rem;
+}
 
 
 
