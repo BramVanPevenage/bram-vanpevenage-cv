@@ -4,9 +4,10 @@
 	padding: 0; /* wipe out browser differences */ 
 }
 html{
-    background: linear-gradient(45deg,  darkblue, purple , red);
+    background: linear-gradient(45deg,  rgb(2, 2, 92) , rgb(1, 1, 73));
     background-size: cover;
     background-repeat:no-repeat;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 main{
     display: flex;
@@ -55,24 +56,31 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
 }
 .box{
-    background-color:#222222;
-    box-shadow: 3px 7px 10px #222222;
-    border-radius: 1rem;
+    background-color:#811212;
+    box-shadow: 39px 45px 0px -19px rgba(0,0,0,1);
+    -webkit-box-shadow: 39px 45px 0px -19px rgba(0,0,0,1);
+    -moz-box-shadow: 39px 45px 0px -19px rgba(0,0,0,1);
+
+    border-radius: 1rem 1rem 1rem 1rem;
     margin: 5rem;
 }
 .box:hover{
-    box-shadow: 5px 10px 22px #222222;
+    transition: 0.4s;
 }
 .box h2{
     color: white;
     padding: 0.5rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+}
+.box h3{
+    color: gray;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
 }
 h1{
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
+    font-family: 'Source Code Pro', monospace;
 }
 h2::after{
     color: red;
@@ -101,34 +109,70 @@ h2::after{
 }
 .csharp:hover{
     transition: all 0.4s;
-    background: rgb(0, 78, 0);
+    background: rgb(0, 87, 0);
 }
 .kotlin{
-    background: blue;
+    transition: all 0.25s;
+}
+.kotlin:hover{
+    transition: all 0.4s;
+    background: rgb(41, 41, 95);
+}
+.java:hover{
+    transition: all 0.4s;
+    background: rgb(88, 71, 39);
 }
 .java{
-    background: orange;
+    transition: all 0.25s;
+}
+.php:hover{
+    transition: all 0.4s;
+    background: rgb(50, 50, 97);
 }
 .php{
-    background: darkblue;
+    transition: all 0.25s;
 }
-.businessC{
+.businessC:hover{
+    transition: all 0.4s;
     background: rgb(219, 121, 28);
 }
-.javascript{
+.businessC{
+    transition: all 0.25s;
+}
+.javascript:hover{
+    transition: all 0.4s;
     background: rgb(144, 243, 105);
 }
-.sql{
+.javascript{
+    transition: all 0.25s;
+}
+.sql:hover{
+    transition: all 0.4s;
     background: red;
 }
-.css{
+.sql{
+    transition: all 0.25s;
+}
+.css:hover{
+    transition: all 0.4s;
     background: brown;
 }
+.css{
+    transition: all 0.25s;
+}
 .python{
+    transition: all 0.25s;
+}
+.python:hover{
+    transition: all 0.4s;
     background: purple;
 }
-.html{
+.html:hover{
+    transition: all 0.4s;
     background: rgb(178, 178, 192);
+}
+.html{
+    transition: all 0.25s;
 }
 .blok{
     border-radius: 1rem;
@@ -206,26 +250,42 @@ h2::after{
 }
 
 
-
-
+/* Ervaring */
+.ervaringContent{
+    margin: 1rem;
+}
 
 /* Taal  */ 
 .taalcontent{
     padding: 1rem;
 }
 
+/* Hobby */ 
+.hobbyCOntent{
+    margin: 1rem;
+}
 
+/* Opleiding */
 
+/* Projecten */ 
 
 /* footer */
 footer{
+    transition: all 1s;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.329);
-    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     padding: 0.7rem; 
+    margin: 1rem;
+    max-width: 20rem;
 }
 footer:hover{
+    transition: all 1s;
     filter: blur(0px);
+    max-width: none;
+    margin: 0;
+
+    border-radius: 0;
 }
 .githubIcon{
     max-width: 2rem;

@@ -51,7 +51,8 @@
     } else if (element.id !== 'myAgeProgress' || element.id !== 'myBar' ) {
       tooltip.style.opacity = '0';
     }
-    if (element.className.includes('box') || element.parentElement.className.includes('box')) {
+    //als je een box hoverd keine animatie dat het echt lijkt dat je hem selecteerd
+    /*if (element.className.includes('box') || element.parentElement.className.includes('box')) {
       if (element.className.includes('box')) {
         let coordinaten = element.getBoundingClientRect();
         //element.style.position = 'absolute';
@@ -63,7 +64,7 @@
         element.parentElement.style.top = coordinaten.x - 1 + 'px';
         //element.parentElement.offsetLeft -= 5;
       }
-    }
+    }*/
     
 
   }
