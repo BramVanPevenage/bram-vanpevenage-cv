@@ -57,14 +57,82 @@ body::-webkit-scrollbar-thumb {
 .links{
     display: inline-block;
 }
-.box{
-    background-color:#292929;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
-   border: 2px solid rgba(7, 7, 7, 0.12);
 
-    border-radius: 1rem 1rem 1rem 1rem;
-    margin: 5rem;
-}
+
+
+/* BOX */ 
+.box {
+    width: 200px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
+    background: #000;
+    transform-origin: center center 0px;
+    transition: all 0.5s ease-out;
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
+    z-index: 1;
+  }
+  .box:hover {
+    animation: unset;
+    margin-top: 18vh;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  @-moz-keyframes animate {
+    0% {
+      margin-top: 20vh;
+    }
+    50% {
+      margin-top: 18vh;
+    }
+    100% {
+      margin-top: 20vh;
+    }
+  }
+  @-webkit-keyframes animate {
+    0% {
+      margin-top: 20vh;
+    }
+    50% {
+      margin-top: 18vh;
+    }
+    100% {
+      margin-top: 20vh;
+    }
+  }
+  @-o-keyframes animate {
+    0% {
+      margin-top: 20vh;
+    }
+    50% {
+      margin-top: 18vh;
+    }
+    100% {
+      margin-top: 20vh;
+    }
+  }
+  @keyframes animate {
+    0% {
+      margin-top: 20vh;
+    }
+    50% {
+      margin-top: 18vh;
+    }
+    100% {
+      margin-top: 20vh;
+    }
+  }
+  
+
+/* BOX */ 
+
 .box:hover{
     transition: 0.4s;
 }
