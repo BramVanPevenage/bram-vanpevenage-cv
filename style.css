@@ -331,7 +331,7 @@ footer{
     bottom: 0;
     position: absolute;
     width: 20vw;
-    border-radius: 50rem;
+    border-radius: 1rem;
     margin-bottom: 0.5vh;
 }
 footer p {
@@ -340,7 +340,7 @@ footer p {
 }
 footer:hover{
     margin-bottom: 1vh;
-    width: 120vh;
+    width: 80vh;
     transition: 0.7s;
     animation-name: footeranimation;
     animation-duration: 0.5s;
@@ -362,8 +362,8 @@ footer:hover .linksbox{
     transition: all 1s;
 }
 footer:hover .linksbox a img{
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
 }
 
 .linksbox{
@@ -372,6 +372,7 @@ footer:hover .linksbox a img{
     transition: all 1s;
 }
 .linksbox a {
+    transition: all 0.5s;
     margin: 0.4rem;
     border: solid 1px rgba(0, 0, 0, 0.247);
     padding: 0.7rem;
@@ -383,7 +384,8 @@ footer:hover .linksbox a img{
 -moz-box-shadow: -1px 0px 20px 3px rgba(0,0,0,0.35);
 }
 .linksbox a img{
-    width: 2.5rem;
+    transition: all 0.5s;
+    width: 1.5rem;
     color: white;
 }
 .githubIcon{
@@ -394,6 +396,10 @@ footer:hover .linksbox a img{
     filter: initial;
     transition: all 0.4s;
 } 
+.linksbox a:hover img{
+    filter: invert();
+    transition: all 0.4s;
+}
 
 
 @keyframes footeranimation {
