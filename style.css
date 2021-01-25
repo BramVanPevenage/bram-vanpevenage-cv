@@ -22,6 +22,7 @@ nav{
 
 
 
+
 /* Scrollbar */ 
 body::-webkit-scrollbar {
     width: 0rem;
@@ -49,78 +50,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-/* BOX */ 
-.box {
-    width: 200px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20vh;
-    margin-bottom: 50px;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
-    background: #000;
-    transform-origin: center center 0px;
-    transition: all 0.5s ease-out;
-    animation-name: animate;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
-    z-index: 1;
-  }
-  .box:hover {
-    animation: unset;
-    margin-top: 18vh;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  @-moz-keyframes animate {
-    0% {
-      margin-top: 20vh;
-    }
-    50% {
-      margin-top: 18vh;
-    }
-    100% {
-      margin-top: 20vh;
-    }
-  }
-  @-webkit-keyframes animate {
-    0% {
-      margin-top: 20vh;
-    }
-    50% {
-      margin-top: 18vh;
-    }
-    100% {
-      margin-top: 20vh;
-    }
-  }
-  @-o-keyframes animate {
-    0% {
-      margin-top: 20vh;
-    }
-    50% {
-      margin-top: 18vh;
-    }
-    100% {
-      margin-top: 20vh;
-    }
-  }
-  @keyframes animate {
-    0% {
-      margin-top: 20vh;
-    }
-    50% {
-      margin-top: 18vh;
-    }
-    100% {
-      margin-top: 20vh;
-    }
-  }
-  
-
-/* BOX */ 
+/* BOX */  
 
 .box:hover{
     transition: 0.4s;
@@ -145,6 +75,86 @@ h2::after{
     height: 10rem;
     width: 10rem;
 }
+.box .content{
+    display: none;
+}
+.box h2{
+    display: block;
+    }
+.box {
+    width: 12rem;
+    height: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40vh;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
+    background: #000;
+    transform-origin: center center 0px;
+    transition: all 0.5s ease-out;
+    animation-name: animate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box:hover {
+    animation: unset;
+    margin-top: 37vh;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  @-moz-keyframes animate {
+    0% {
+      margin-top: 40vh;
+    }
+    50% {
+      margin-top: 37vh;
+    }
+    100% {
+      margin-top: 40vh;
+    }
+  }
+  @-webkit-keyframes animate {
+    0% {
+        margin-top: 40vh;
+      }
+      50% {
+        margin-top: 37vh;
+      }
+      100% {
+        margin-top: 40vh;
+      }
+  }
+  @-o-keyframes animate {
+    0% {
+        margin-top: 40vh;
+      }
+      50% {
+        margin-top: 37vh;
+      }
+      100% {
+        margin-top: 40vh;
+      }
+  }
+  @keyframes animate {
+    0% {
+        margin-top: 40vh;
+      }
+      50% {
+        margin-top: 37vh;
+      }
+      100% {
+        margin-top: 40vh;
+      }
+  }
+  
+
+
 
 
 
