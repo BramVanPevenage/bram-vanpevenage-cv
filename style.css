@@ -4,7 +4,9 @@
 	padding: 0; /* wipe out browser differences */ 
 }
 html{
-    background: linear-gradient(45deg,  rgb(2, 2, 92) , rgb(1, 1, 73));
+    /*background: linear-gradient(45deg,  rgb(2, 2, 92) , rgb(1, 1, 73));*/
+    /*background-image: url(images/LembeekKanaal.JPG);*/
+    background-color: #791b1b;
     background-size: cover;
     background-repeat:no-repeat;
     font-family: 'Source Sans Pro', sans-serif;
@@ -20,24 +22,14 @@ nav{
 
 
 
+
 /* Scrollbar */ 
-body::-webkit-scrollbar-track {
-    background-image: linear-gradient(red, purple);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
 body::-webkit-scrollbar {
-
-}
-body::-webkit-scrollbar {
-    width: 0.7rem;
+    width: 0rem;
 
 }
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(93, 92, 92);
-    border-radius: 20px;
-}
-body::-webkit-scrollbar-thumb {
-    width: 5rem;
+    width: 0rem;
 }
 
 
@@ -55,15 +47,11 @@ body::-webkit-scrollbar-thumb {
 .links{
     display: inline-block;
 }
-.box{
-    background-color:#811212;
-    box-shadow: 39px 45px 0px -19px rgba(0,0,0,1);
-    -webkit-box-shadow: 39px 45px 0px -19px rgba(0,0,0,1);
-    -moz-box-shadow: 39px 45px 0px -19px rgba(0,0,0,1);
 
-    border-radius: 1rem 1rem 1rem 1rem;
-    margin: 5rem;
-}
+
+
+/* BOX */  
+
 .box:hover{
     transition: 0.4s;
 }
@@ -87,13 +75,87 @@ h2::after{
     height: 10rem;
     width: 10rem;
 }
+.box .content{
+    display: none;
+}
+.box h2{
+    display: block;
+    }
+.box {
+    width: 12rem;
+    height: 17rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40vh;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 10px 40px 2px rgba(0,0,0,0.4);
+    background: #000;
+    transform-origin: center center 0px;
+    transition: all 0.5s ease-out;
+    animation-name: animate;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transform: perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box:hover {
+    animation: unset;
+    margin-top: 37vh;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  @-moz-keyframes animate {
+    0% {
+      margin-top: 40vh;
+    }
+    50% {
+      margin-top: 37vh;
+    }
+    100% {
+      margin-top: 40vh;
+    }
+  }
+  @-webkit-keyframes animate {
+    0% {
+        margin-top: 40vh;
+      }
+      50% {
+        margin-top: 37vh;
+      }
+      100% {
+        margin-top: 40vh;
+      }
+  }
+  @-o-keyframes animate {
+    0% {
+        margin-top: 40vh;
+      }
+      50% {
+        margin-top: 37vh;
+      }
+      100% {
+        margin-top: 40vh;
+      }
+  }
+  @keyframes animate {
+    0% {
+        margin-top: 40vh;
+      }
+      50% {
+        margin-top: 37vh;
+      }
+      100% {
+        margin-top: 40vh;
+      }
+  }
+  
 
-.material-icons{
-    color: rgba(251, 251, 251, 0.609);
-}
-.material-icons:hover{
-    color: rgba(94, 55, 200, 0.815);
-}
+
+
+
 
 
 
@@ -273,21 +335,102 @@ h2::after{
 footer{
     transition: all 1s;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.329);
-    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
-    padding: 0.7rem; 
-    margin: 1rem;
-    max-width: 20rem;
+    background-color: rgba(0, 0, 0, 0.986);
+    padding: 0.5rem; 
+    bottom: 0;
+    position: absolute;
+    width: 20vw;
+    border-radius: 1rem;
+    margin-bottom: 0.5vh;
+}
+footer p {
+    transition: all 0.4s;
+    opacity: 0;
+    position: absolute;
 }
 footer:hover{
+    margin-bottom: 1vh;
+    width: 80vh;
+    transition: 0.7s;
+    animation-name: footeranimation;
+    animation-duration: 0.5s;
+    -webkit-box-shadow: 7px 7px 9px 0px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow:    7px 7px 9px 0px rgba(0, 0, 0, 0.61);
+    box-shadow:         7px 7px 9px 0px rgba(0, 0, 0, 0.61);
+}
+footer:hover p{
+    position: relative;
+    transition: all 0.4s;
+    opacity: 100%;
+    color: white;
+}
+.footerbox{
+    min-width: max-content;
+    display: flex;
+    justify-content: center;
+}
+footer:hover .linksbox{
+    justify-content: space-around;
     transition: all 1s;
-    filter: blur(0px);
-    max-width: none;
-    margin: 0;
+}
+footer:hover .linksbox a img{
+    width: 2.6rem;
+    height: 2.6rem;
+}
 
-    border-radius: 0;
+.linksbox{
+    display: flex;
+    justify-content: space-around;
+    transition: all 1s;
 }
-.githubIcon{
-    max-width: 2rem;
-    filter: hue-rotate(50deg);
+.linksbox a {
+    transition: all 0.5s;
+    margin: 0.4rem;
+    border: solid 1px #791B1B;
+    padding: 0.7rem;
+    border-radius: 15rem;
 }
+.linksbox a:hover {
+    box-shadow: -1px 0px 20px 3px rgba(95, 0, 0, 0.493);
+-webkit-box-shadow: -1px 0px 20px 3px rgba(95, 0, 0, 0.493);
+-moz-box-shadow: -1px 0px 20px 3px rgba(95, 0, 0, 0.493);
+}
+.linksbox a img{
+    transition: all 0.5s;
+    width: 1.5rem;
+    filter: invert();
+}
+.linksbox a .githubIcon{
+    transition: all 0.4s;
+    filter: initial;
+}
+.linksbox a:hover {
+    background-color: #791B1B;
+    transition: all 0.4s;
+} 
+.linksbox a:hover {
+    background-color: #791B1B;
+    transition: all 0.4s;
+}
+
+
+@keyframes footeranimation {
+      50% {
+        margin-bottom: 1vh;
+      }
+}
+@-moz-keyframes footeranimation {
+    50% {
+        margin-bottom: 1vh;
+      }
+  }
+  @-webkit-keyframes footeranimation {
+    50% {
+        margin-bottom: 1vh;
+      }
+  }
+  @-o-keyframes footeranimation {
+    50% {
+        margin-bottom: 1vh;
+      }
+  }

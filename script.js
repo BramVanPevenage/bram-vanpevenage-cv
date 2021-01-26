@@ -4,17 +4,123 @@
   let birthDate = '12/12/2001';
   let procentNextAge = 0;
   let myAge = (calculateAge(birthDate));
+  let allBoxes = null;
 
   // Event listeners
   window.addEventListener('load', () => {
 
     document.getElementsByClassName('age')[0].innerHTML = Math.floor(myAge);
     document.getElementsByClassName('nextage')[0].innerHTML = Math.floor(myAge) + 1;
+    aanmakenExitBtn();
+
+    //box clickListeners
+    document.getElementsByClassName('persoonlijk')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('persoonlijk')[0]);
+    });
+    document.getElementsByClassName('ervaring')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('ervaring')[0]);
+    });
+    document.getElementsByClassName('projecten')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('projecten')[0]);
+    });
+    document.getElementsByClassName('opleiding')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('opleiding')[0]);
+    });
+    document.getElementsByClassName('hobbys')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('hobbys')[0]);
+    });
+    document.getElementsByClassName('taal')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('taal')[0]);
+    });
+    document.getElementsByClassName('progervaring ')[0].addEventListener('click', () => {
+      selectBox(document.getElementsByClassName('progervaring ')[0]);
+    });
+    document.getElementsByClassName('btnExit')[0].addEventListener('click', () => {
+      BackToHomeScreen();
+      document.getElementsByClassName('btnExit ')[0].style.display = 'none';
+    });
 
   });
   document.addEventListener('mouseover', hoverProgressBar);
 
+
+
+
   //functies
+
+  //verwijderen van alle boxes tonen van inhoud van geselecteerde box, exit button aanmaken
+
+  function selectBox(selectedBox) {
+    selectedBox.style.backgroundColor = 'blue';
+    selectedBox.style.margin = '0';
+    selectedBox.style.animation = 'none';
+    selectedBox.style.width = '100vw';
+    selectedBox.style.height = '100vh';
+
+    allBoxes = document.getElementsByClassName('box');
+
+    for (let index = 0; index < allBoxes.length; index++) {
+      if (allBoxes[index] != selectedBox) {
+        allBoxes[index].style.display = 'none';
+      } else {
+        for (let i = 0; i < allBoxes[index].children.length; i++) {
+          allBoxes[index].children[i].style.display = 'block';
+          
+        }
+      }
+
+    }
+
+    //zichtbaar maken bntExit
+    zichtbaarBtnExit();
+  }
+
+  //terug naar homeScreen
+  function BackToHomeScreen() {
+    for (let index = 0; index < allBoxes.length; index++) {
+      if (allBoxes[index].style.width != '12rem') {
+        allBoxes[index].style.backgroundColor = 'black';
+        allBoxes[index].style.marginTop = '40vh';
+        allBoxes[index].style.marginLeft = 'auto';
+        allBoxes[index].style.marginRight = 'auto';
+        allBoxes[index].style.animation = 'animate 7s infinite';
+        allBoxes[index].style.width = '12rem';
+        allBoxes[index].style.height = '17rem';
+      }
+      allBoxes[index].style.display = 'flex';
+
+      for (let i = 0; i < allBoxes[index].children.length; i++) {
+        if (allBoxes[index].children[i].className.includes('content')) {
+          allBoxes[index].children[i].style.display = 'none';
+        }
+        
+      }
+    }
+  }
+
+  //aanmaken exit button
+  function aanmakenExitBtn() {
+    let btnExit = document.createElement('img');
+    btnExit.src = 'images/closeIcon.png';
+    btnExit.className = 'btnExit';
+    btnExit.style.width = '3.5rem';
+    btnExit.style.height = '3.5rem';
+    btnExit.style.display = 'none';
+    btnExit.style.border = '1px solid black';
+    btnExit.style.padding = '0.7rem';
+    btnExit.style.borderRadius = '50rem';
+    btnExit.style.position = 'absolute';
+    btnExit.style.top = '90vh';
+    btnExit.style.right = '5vh';
+    btnExit.style.zIndex = '10';
+    btnExit.style.cursor = 'pointer';
+    document.getElementsByTagName('main')[0].appendChild(btnExit);
+
+  }
+
+  function zichtbaarBtnExit() {
+    document.getElementsByClassName('btnExit ')[0].style.display = 'block';
+  }
 
   //bereken van leeftijd op een doorgegeven datum
   function calculateAge(birthDate) {
@@ -48,7 +154,7 @@
       tooltip.style.left = x + 15 + 'px';
       tooltip.innerHTML = round(procentNextAge.replace('%', ''), 2) + '%';
       tooltip.style.opacity = '100';
-    } else if (element.id !== 'myAgeProgress' || element.id !== 'myBar' ) {
+    } else if (element.id !== 'myAgeProgress' || element.id !== 'myBar') {
       tooltip.style.opacity = '0';
     }
     //als je een box hoverd keine animatie dat het echt lijkt dat je hem selecteerd
@@ -65,7 +171,7 @@
         //element.parentElement.offsetLeft -= 5;
       }
     }*/
-    
+
 
   }
 
