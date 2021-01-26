@@ -80,12 +80,14 @@
     for (let index = 0; index < allBoxes.length; index++) {
       if (allBoxes[index].style.width != '12rem') {
         allBoxes[index].style.backgroundColor = 'black';
-        allBoxes[index].style.margin = 'auto';
-        allBoxes[index].style.animation = 'none';
+        allBoxes[index].style.marginTop = '40vh';
+        allBoxes[index].style.marginLeft = 'auto';
+        allBoxes[index].style.marginRight = 'auto';
+        allBoxes[index].style.animation = 'animate 7s infinite';
         allBoxes[index].style.width = '12rem';
         allBoxes[index].style.height = '17rem';
       }
-      allBoxes[index].style.display = 'block';
+      allBoxes[index].style.display = 'flex';
 
       for (let i = 0; i < allBoxes[index].children.length; i++) {
         if (allBoxes[index].children[i].className.includes('content')) {
