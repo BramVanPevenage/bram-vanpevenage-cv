@@ -78,6 +78,27 @@ h2::after{
 .box .content{
     display: none;
 }
+.btnExit{
+  transition: 1s;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #000;
+}
+.btnExit:active{
+    transition: 0ms;
+    box-shadow: 0 5px #000;
+    transform: translateY(4px);
+}
+.btnExit:hover img{
+    transition: 2s;
+    transform: rotate(180deg);
+}
 .box h2{
     display: block;
     }
@@ -341,15 +362,44 @@ footer{
     position: absolute;
     width: 20vw;
     border-radius: 1rem;
-    margin-bottom: 0.5vh;
+    margin-bottom: 1.2vh;
 }
 footer p {
     transition: all 0.4s;
     opacity: 0;
     position: absolute;
 }
+.footerbox{
+    min-width: max-content;
+    display: flex;
+    justify-content: center;
+}
+.linksbox{
+    display: flex;
+    justify-content: space-around;
+    transition: all 1s;
+}
+.linksbox a {
+    transition: all 0.5s;
+    margin: 0.4rem;
+    border: solid 1px #791B1B;
+    padding: 0.7rem;
+    border-radius: 15rem;
+
+
+}
+.linksbox a img{
+    transition: all 0.5s;
+    width: 1.5rem;
+    filter: invert();
+}
+.linksbox a .githubIcon{
+    transition: all 0.4s;
+    filter: initial;
+}
+/*hover footer ---------------------------------------------- */
 footer:hover{
-    margin-bottom: 1vh;
+    margin-bottom: 1.5vh;
     width: 80vh;
     transition: 0.7s;
     animation-name: footeranimation;
@@ -364,54 +414,38 @@ footer:hover p{
     opacity: 100%;
     color: white;
 }
-.footerbox{
-    min-width: max-content;
-    display: flex;
-    justify-content: center;
-}
+.linksbox a:hover {
+    background-color: #791B1B;
+    transition: all 0.4s;
+} 
 footer:hover .linksbox{
     justify-content: space-around;
     transition: all 1s;
+
 }
 footer:hover .linksbox a img{
     width: 2.6rem;
     height: 2.6rem;
 }
+footer:hover .linksbox a{
+    outline: none;
+    color: #fff;
+    background-color: #791B1B;
+    border: 1px solid black;
+    box-shadow: 0 9px #791b1b94;
+}
+footer .linksbox a:hover{
+    box-shadow: 0 10px #791b1b94;
+    transform: translateY(-2px);
+}
+/* active buttons */
+footer .linksbox a:active {
+    transition: none;
+    box-shadow: 0 2px #791b1b94;
+    transform: translateY(6px);
+  }
 
-.linksbox{
-    display: flex;
-    justify-content: space-around;
-    transition: all 1s;
-}
-.linksbox a {
-    transition: all 0.5s;
-    margin: 0.4rem;
-    border: solid 1px #791B1B;
-    padding: 0.7rem;
-    border-radius: 15rem;
-}
-.linksbox a:hover {
-    box-shadow: -1px 0px 20px 3px rgba(95, 0, 0, 0.493);
--webkit-box-shadow: -1px 0px 20px 3px rgba(95, 0, 0, 0.493);
--moz-box-shadow: -1px 0px 20px 3px rgba(95, 0, 0, 0.493);
-}
-.linksbox a img{
-    transition: all 0.5s;
-    width: 1.5rem;
-    filter: invert();
-}
-.linksbox a .githubIcon{
-    transition: all 0.4s;
-    filter: initial;
-}
-.linksbox a:hover {
-    background-color: #791B1B;
-    transition: all 0.4s;
-} 
-.linksbox a:hover {
-    background-color: #791B1B;
-    transition: all 0.4s;
-}
+
 
 
 @keyframes footeranimation {
@@ -434,3 +468,5 @@ footer:hover .linksbox a img{
         margin-bottom: 1vh;
       }
   }
+
+

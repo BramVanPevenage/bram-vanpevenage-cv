@@ -39,9 +39,10 @@
       BackToHomeScreen();
       document.getElementsByClassName('btnExit ')[0].style.display = 'none';
     });
+    document.addEventListener('mouseover', hoverProgressBar);
 
   });
-  document.addEventListener('mouseover', hoverProgressBar);
+  
 
 
 
@@ -56,6 +57,7 @@
     selectedBox.style.animation = 'none';
     selectedBox.style.width = '100vw';
     selectedBox.style.height = '100vh';
+    selectedBox.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
 
     allBoxes = document.getElementsByClassName('box');
 
@@ -75,6 +77,7 @@
     zichtbaarBtnExit();
   }
 
+
   //terug naar homeScreen
   function BackToHomeScreen() {
     for (let index = 0; index < allBoxes.length; index++) {
@@ -86,6 +89,8 @@
         allBoxes[index].style.animation = 'animate 7s infinite';
         allBoxes[index].style.width = '12rem';
         allBoxes[index].style.height = '17rem';
+        allBoxes[index].style.transform = 'perspective(1000px) rotateX(35deg) rotateY(4deg) rotateZ(-30deg)';
+
       }
       allBoxes[index].style.display = 'flex';
 
@@ -100,20 +105,23 @@
 
   //aanmaken exit button
   function aanmakenExitBtn() {
-    let btnExit = document.createElement('img');
-    btnExit.src = 'images/closeIcon.png';
-    btnExit.className = 'btnExit';
-    btnExit.style.width = '3.5rem';
-    btnExit.style.height = '3.5rem';
+    let imgExit = document.createElement('img');
+    imgExit.src = 'images/closeIcon.png';
+    let btnExit = document.createElement('div');
+    imgExit.style.padding = '0.8rem';
+    
+    btnExit.className = 'btnExit button';
+    imgExit.style.width = '3.5rem';
+    imgExit.style.height = '3.5rem';
     btnExit.style.display = 'none';
     btnExit.style.border = '1px solid black';
-    btnExit.style.padding = '0.7rem';
     btnExit.style.borderRadius = '50rem';
     btnExit.style.position = 'absolute';
     btnExit.style.top = '90vh';
     btnExit.style.right = '5vh';
     btnExit.style.zIndex = '10';
     btnExit.style.cursor = 'pointer';
+    btnExit.appendChild(imgExit);
     document.getElementsByTagName('main')[0].appendChild(btnExit);
 
   }
