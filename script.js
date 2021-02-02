@@ -42,7 +42,7 @@
     document.addEventListener('mouseover', hoverProgressBar);
 
   });
-  
+
 
 
 
@@ -67,7 +67,34 @@
       } else {
         for (let i = 0; i < allBoxes[index].children.length; i++) {
           allBoxes[index].children[i].style.display = 'block';
-          
+          if (allBoxes[index].children[i].tagName == 'H2') {
+            allBoxes[index].children[i].style.fontSize = '2.5rem';
+
+            if (allBoxes[index].className.includes('persoonlijk')) {
+              allBoxes[index].children[i].style.fontSize = '18rem';
+            }
+            if (allBoxes[index].className.includes('taal')) {
+              allBoxes[index].children[i].style.fontSize = '40rem';
+            }
+            if (allBoxes[index].className.includes('ervaring')) {
+              allBoxes[index].children[i].style.fontSize = '24rem';
+            }
+            if(allBoxes[index].className.includes('progervaring')){
+              allBoxes[index].children[i].style.fontSize = '21rem';
+            }
+            if (allBoxes[index].className.includes('projecten')) {
+              allBoxes[index].children[i].style.fontSize = '22rem';
+            }
+            if (allBoxes[index].className.includes('opleiding')) {
+              allBoxes[index].children[i].style.fontSize = '20rem';
+            }
+            if (allBoxes[index].className.includes('hobbys')) {
+              allBoxes[index].children[i].style.fontSize = '25rem';
+            }
+            allBoxes[index].children[i].style.opacity = '20%';
+            allBoxes[index].children[i].style.position = 'absolute';
+
+          }
         }
       }
 
@@ -97,8 +124,13 @@
       for (let i = 0; i < allBoxes[index].children.length; i++) {
         if (allBoxes[index].children[i].className.includes('content')) {
           allBoxes[index].children[i].style.display = 'none';
+
         }
-        
+        if (allBoxes[index].children[i].tagName == 'H2') {
+          allBoxes[index].children[i].style.fontSize = '1.7rem';
+          allBoxes[index].children[i].style.opacity = '100%';
+        }
+
       }
     }
   }
@@ -109,7 +141,7 @@
     imgExit.src = 'images/closeIcon.png';
     let btnExit = document.createElement('div');
     imgExit.style.padding = '0.8rem';
-    
+
     btnExit.className = 'btnExit button';
     imgExit.style.width = '3.5rem';
     imgExit.style.height = '3.5rem';
