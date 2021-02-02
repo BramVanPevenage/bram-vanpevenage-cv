@@ -206,97 +206,212 @@ h2::after{
 
 
 /* programeer taal venster */
-.csharp{
-    transition: all 0.25s;
-}
 .csharp:hover{
-    transition: all 0.4s;
-    background: rgb(0, 87, 0);
-}
-.kotlin{
-    transition: all 0.25s;
+    color: #2A8A19;
 }
 .kotlin:hover{
-    transition: all 0.4s;
-    background: rgb(41, 41, 95);
+    color: #F18E33;
 }
 .java:hover{
-    transition: all 0.4s;
-    background: rgb(88, 71, 39);
-}
-.java{
-    transition: all 0.25s;
+    color: #B07219;
 }
 .php:hover{
-    transition: all 0.4s;
-    background: rgb(50, 50, 97);
-}
-.php{
-    transition: all 0.25s;
+    color: #4F5D95;
 }
 .businessC:hover{
-    transition: all 0.4s;
-    background: rgb(219, 121, 28);
-}
-.businessC{
-    transition: all 0.25s;
+    color: #555555;
 }
 .javascript:hover{
-    transition: all 0.4s;
-    background: rgb(144, 243, 105);
-}
-.javascript{
-    transition: all 0.25s;
+    color: #F1E05A;
 }
 .sql:hover{
-    transition: all 0.4s;
-    background: red;
-}
-.sql{
-    transition: all 0.25s;
+    color: #F34B7D;
 }
 .css:hover{
-    transition: all 0.4s;
-    background: brown;
-}
-.css{
-    transition: all 0.25s;
-}
-.python{
-    transition: all 0.25s;
+    color: #563D7C;
 }
 .python:hover{
-    transition: all 0.4s;
-    background: purple;
+    color: #3572A5;
 }
 .html:hover{
-    transition: all 0.4s;
-    background: rgb(178, 178, 192);
+    color: #E34C26;
 }
-.html{
-    transition: all 0.25s;
+.programeerervaringcontent{
+    width: 50%;
 }
-/*.blok{
-    border-radius: 1rem;
-    text-align: center;
-    box-shadow: 0.5rem 1.0rem 1.8rem #0f0f0f;
-    padding: 1rem;
-}*/
-/*.programeertalen{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto; 
-    column-gap: 1rem;
-    row-gap: 1rem;
-    margin: 5rem;
-}*/
 .programeertalen{
+    z-index: 10;
     display: flex;
     flex-flow: column;
+    width: 100%;
+}
+.programeertalen .blok h3{
+    width: 100%;
 }
 .blok{
+    
+    z-index: 20;
     padding: 0.7;
     margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.procent{
+    transition: 0.4s;
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    display: block;
+    opacity: 10%;
+    border-radius: 15rem;
+}
+.blok:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 50%;
+}
+.csharp:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 95%;
+    background-color: #2A8A19;
+}
+.csharp:hover .procent::after{
+    content: "95%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #2A8A19;
+  
+}
+.kotlin:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 80%;
+    background-color: #F18E33;
+}
+.kotlin:hover .procent::after{
+    content: "80%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #F18E33;
+}
+.php:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 60%;
+    background-color: #4F5D95;
+}
+.php:hover .procent::after{
+    content: "60%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #4F5D95;
+}
+.java:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 80%;
+    background-color: #B07219;
+}
+.java:hover .procent::after{
+    content: "80%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #B07219;
+}
+.sql:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 95%;
+    background-color: #F34B7D;
+}
+.sql:hover .procent::after{
+    content: "95%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #F34B7D;
+}
+.html:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 95%;
+    background-color: #E34C26;
+}
+.html:hover .procent::after{
+    content: "95%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #E34C26;
+}
+.css:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 85%;
+    background-color: #563D7C;
+}
+.css:hover .procent::after{
+    content: "85%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #563D7C;
+}
+.javascript:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 80%;
+    background-color: #F1E05A;
+}
+.javascript:hover .procent::after{
+    content: "80%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #F1E05A;
+}
+.python:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 50%;
+    background-color: #3572A5;
+}
+.python:hover .procent::after{
+    content: "50%";
+    margin: -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #3572A5;
+}
+.businessc:hover .procent{
+    transition: 1s;
+    opacity: 100%;
+    width: 20%;
+    background-color: #555555;
+}
+.businessc:hover .procent::after{
+    content: "20%";
+    margin: -2.5rem -2.5rem -2.5rem -2.5rem;
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  color: #555555;
 }
 
 
@@ -368,22 +483,12 @@ h2::after{
 .taalcontent{
     position: absolute;
     padding: 1rem;
-    display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 11em 18em;
-  grid-template-areas:
-    ". ."
-    ". .";
 }
 .tcontent{
     background-color: transparent;
     padding: 0.7rem;
     margin: 1rem;
     border-radius: 0.5rem;
-}
-.tcontent:hover{
-    box-shadow: 10px 10px 30000px 10px rgba(0, 0, 0, 0.815);
 }
 .duolingolink{
     transition: 0.4s;
