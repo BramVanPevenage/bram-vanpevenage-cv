@@ -82,6 +82,11 @@ body::-webkit-scrollbar-thumb {
     border-color: #F4000B;
     width: 30%;
 }
+.econtent:hover h3{
+    transition: 1s;
+    border-color: #F4000B;
+    width: 30%;
+}
 .box  p{
     margin: 1.2rem;
 }
@@ -93,6 +98,18 @@ h2::after{
     color: red;
     height: 10rem;
     width: 10rem;
+}
+h4{
+    color: black;
+    margin: 0.5rem;
+    font-weight: 700;
+    font-style: italic;
+    font-family: 'Source Code Pro';
+}
+p, li{
+    font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
 }
 .box .content{
     display: none;
@@ -420,19 +437,36 @@ h2::after{
 
 
 /* me venster */
-.pffoto{
-    border-radius: 10rem 10rem 20rem 20rem;
-    max-width: 5rem;
+.nationalitycontent{
     margin: 1rem;
+}
+.contentpersoonlijk{
+    z-index: 30;
+    display: flex;
+}
+.mecontent{
+    border-radius: 10rem 10rem 20rem 20rem;
+    margin: 2rem;
+    margin-left: 25%;
+    height: 20rem;
+    width: 20rem;
+    overflow: hidden;
+}
+.pffoto{
+    transition: 0.5s;
+    max-width: 20rem;
+}
+.pffoto:hover{
+    transform: scale(1.5);
 }
 .bVlag{
     border-radius: 1rem 1rem 2rem 2rem;
     max-width: 1.1rem;
-    margin: 0.5rem;
+    margin: 0rem 0.5rem -0.2rem 0.5rem;
 }
 .contentpersoonlijk{
     display: flex;
-    flex-flow: row-reverse;
+    flex-direction: column;
     padding: 1rem;
 }
 .dot{
@@ -445,7 +479,7 @@ h2::after{
 #myAgeProgress{
     margin: 0.7rem 0.7rem 0.3rem 0rem;
     width: 100%;
-    height: 9.5%;
+    height: 1.5rem;
     background-color: rgb(116, 116, 116);
     border-radius: 1.5rem;
 }
@@ -477,6 +511,7 @@ h2::after{
 /* Ervaring */
 .ervaringContent{
     margin: 1rem;
+    z-index: 30;
 }
 
 /* Taal  */ 
@@ -515,7 +550,15 @@ h2::after{
 }
 
 /* Opleiding */
-
+.opleiding ul{
+    margin: 2rem;
+    text-decoration: none;
+    list-style: none;
+}
+.opleiding li{
+    margin: 0.7rem;
+    text-decoration: none;
+}
 /* Projecten */ 
 
 /* footer */
