@@ -1,7 +1,7 @@
 * {
 	box-sizing: border-box; /* width and height include paddings and borders */
 	margin: 0; /* wipe out browser differences */
-	padding: 0; /* wipe out browser differences */ 
+    padding: 0; /* wipe out browser differences */
 }
 html{
     
@@ -110,6 +110,7 @@ p, li{
     font-family: 'Quicksand';
   font-style: normal;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 .box .content{
     display: none;
