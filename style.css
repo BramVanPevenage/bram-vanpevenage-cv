@@ -12,8 +12,7 @@ html{
     font-family: 'Source Sans Pro', sans-serif;
 }
 body{
-    background: linear-gradient(45deg,  rgb(241, 78, 78) , rgb(165, 8, 8));
-    background-repeat:no-repeat;
+    background-image: linear-gradient(to right top, #f2196e, #e40286, #cf139e, #b02ab3, #863cc5, #6f58dd, #4f6ff0, #0084ff, #00a8ff, #00c2ef, #00d3a7, #0ddc4c);    background-repeat:no-repeat;
     background-size: cover;
     height: 100vh;
     overflow: hidden;
@@ -35,6 +34,7 @@ nav{
   font-family: 'Source Code Pro', monospace;
   font-size: 5rem;
   font-weight: 700;
+  color: whitesmoke;
 }
 
 
