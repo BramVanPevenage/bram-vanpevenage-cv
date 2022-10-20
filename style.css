@@ -459,17 +459,16 @@ p, li{
 .mecontent{
     border-radius: 10rem 10rem 20rem 20rem;
     margin: 2rem;
-    margin-left: 25%;
     height: 20rem;
     width: 20rem;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .pffoto{
-    transition: 0.5s;
     max-width: 20rem;
-}
-.pffoto:hover{
-    transform: scale(1.5);
 }
 .bVlag{
     border-radius: 1rem 1rem 2rem 2rem;
@@ -484,21 +483,28 @@ p, li{
 .dot{
     color: red;
 }
-.ageDiv{
+.myAgeProgress{
+    margin: 0.7rem 0.7rem 0.3rem 0rem;
+    width: 90%;
+    height: 1.5rem;
+    background-color: #f1f1f12c;
+    border-radius: 1.5rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+.age, .nextage{
+    margin-top: 2rem;
+    font-size: 19px;
+    font-weight: 700;
+}
+.age__container{
     display: flex;
     justify-content: space-between;
-}
-#myAgeProgress{
-    margin: 0.7rem 0.7rem 0.3rem 0rem;
-    width: 100%;
-    height: 1.5rem;
-    background-color: rgb(116, 116, 116);
-    border-radius: 1.5rem;
 }
 #myBar{
     border-radius: 1.5rem;
     width: 10%;
-    height: 100%;
+    height: 80%;
     background-color: green;
 }
 #myAgeProgress:hover .tooltip{
@@ -651,7 +657,7 @@ footer:hover .linksbox a img{
 footer:hover .linksbox a{
     outline: none;
     color: #fff;
-    background-color: #791B1B;
+    background-color: #a41212;
     border: 1px solid black;
     box-shadow: 0 9px #791b1b94;
 }
