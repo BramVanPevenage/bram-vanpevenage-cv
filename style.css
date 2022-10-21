@@ -4,8 +4,7 @@
     padding: 0; /* wipe out browser differences */
 }
 html{
-    background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     font-family: 'Source Sans Pro', sans-serif;
 }
 body{
@@ -38,11 +37,6 @@ nav{
 ::selection{
     color: blue;
 }
-
-.navUl li {
-    display: inline;
-}
-
 .links{
     display: inline-block;
 }
@@ -190,18 +184,6 @@ p, li{
       }
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* programeer taal venster */
 .csharp:hover{
@@ -557,7 +539,7 @@ footer{
     bottom: 0;
     position: absolute;
     width: 20vw;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin-bottom: 1.2vh;
 }
 footer p {
