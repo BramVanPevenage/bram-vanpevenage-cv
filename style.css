@@ -47,10 +47,7 @@ nav{
     display: inline-block;
 }
 
-
-
 /* BOX */  
-
 .box:hover{
     transition: 0.4s;
 }
@@ -69,16 +66,6 @@ nav{
     border-bottom: 0.3rem solid transparent;
     width: 25%;
 
-}
-.tcontent:hover h3{
-    transition: 1s;
-    border-color: #F4000B;
-    width: 30%;
-}
-.econtent:hover h3{
-    transition: 1s;
-    border-color: #F4000B;
-    width: 30%;
 }
 .box  p{
     margin: 1.2rem;
@@ -486,7 +473,7 @@ p, li{
 #myBar{
     border-radius: 1.5rem;
     width: 10%;
-    height: 80%;
+    height: 100%;
     background-color: green;
 }
 #myAgeProgress:hover .tooltip{
@@ -654,9 +641,6 @@ footer .linksbox a:active {
     transform: translateY(6px);
   }
 
-
-
-
 @keyframes footeranimation {
       50% {
         margin-bottom: 1vh;
@@ -677,5 +661,3 @@ footer .linksbox a:active {
         margin-bottom: 1vh;
       }
   }
-
-
