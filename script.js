@@ -13,7 +13,7 @@
     document.getElementsByClassName('nextage')[0].innerHTML = Math.floor(myAge) + 1;
     aanmakenExitBtn();
 
-    //box clickListeners
+    //box clickListeners => TODO: maak een functie die dit doet met behulp van een forloop, die alle objecten in een array doorloopt. met zelfde class.
     document.getElementsByClassName('persoonlijk')[0].addEventListener('click', () => {
       selectBox(document.getElementsByClassName('persoonlijk')[0]);
     });
@@ -197,20 +197,6 @@
     } else if (element.id !== 'myAgeProgress' || element.id !== 'myBar') {
       tooltip.style.opacity = '0';
     }
-    //als je een box hoverd keine animatie dat het echt lijkt dat je hem selecteerd
-    /*if (element.className.includes('box') || element.parentElement.className.includes('box')) {
-      if (element.className.includes('box')) {
-        let coordinaten = element.getBoundingClientRect();
-        //element.style.position = 'absolute';
-        element.offsetLeft -= 5;
-      }
-      if (element.parentElement.className.includes('box')) {
-        let coordinaten = element.parentElement.getBoundingClientRect();
-        element.parentElement.style.position = 'absolute';
-        element.parentElement.style.top = coordinaten.x - 1 + 'px';
-        //element.parentElement.offsetLeft -= 5;
-      }
-    }*/
 
 
   }
