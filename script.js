@@ -15,19 +15,19 @@
 
     //box clickListeners => TODO: maak een functie die dit doet met behulp van een forloop, die alle objecten in een array doorloopt. met zelfde class.
     document
-      .getElementsByClassName("persoonlijk")[0]
+      .getElementsByClassName("persoonlijk__box")[0]
       .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("persoonlijk")[0]);
+        selectBox(document.getElementsByClassName("persoonlijk__box")[0]);
       });
     document
-      .getElementsByClassName("ervaring")[0]
+      .getElementsByClassName("ervaring__box")[0]
       .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("ervaring")[0]);
+        selectBox(document.getElementsByClassName("ervaring__box")[0]);
       });
     document
-      .getElementsByClassName("projecten")[0]
+      .getElementsByClassName("projecten__box")[0]
       .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("projecten")[0]);
+        selectBox(document.getElementsByClassName("projecten__box")[0]);
       });
     document
       .getElementsByClassName("opleiding")[0]
@@ -35,17 +35,17 @@
         selectBox(document.getElementsByClassName("opleiding")[0]);
       });
     document
-      .getElementsByClassName("hobbys")[0]
+      .getElementsByClassName("hobbys__box")[0]
       .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("hobbys")[0]);
+        selectBox(document.getElementsByClassName("hobbys__box")[0]);
       });
-    document.getElementsByClassName("taal")[0].addEventListener("click", () => {
-      selectBox(document.getElementsByClassName("taal")[0]);
+    document.getElementsByClassName("taal__box")[0].addEventListener("click", () => {
+      selectBox(document.getElementsByClassName("taal__box")[0]);
     });
     document
-      .getElementsByClassName("progervaring ")[0]
+      .getElementsByClassName("progervaring__box__box ")[0]
       .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("progervaring ")[0]);
+        selectBox(document.getElementsByClassName("progervaring__box__box ")[0]);
       });
     document
       .getElementsByClassName("btnExit")[0]
@@ -80,25 +80,25 @@
           if (allBoxes[index].children[i].tagName == "H2") {
             allBoxes[index].children[i].style.fontSize = "2.5rem";
 
-            if (allBoxes[index].className.includes("persoonlijk")) {
+            if (allBoxes[index].className.includes("persoonlijk__box")) {
               allBoxes[index].children[i].style.fontSize = "18rem";
             }
-            if (allBoxes[index].className.includes("taal")) {
+            if (allBoxes[index].className.includes("taal__box")) {
               allBoxes[index].children[i].style.fontSize = "40rem";
             }
-            if (allBoxes[index].className.includes("ervaring")) {
+            if (allBoxes[index].className.includes("ervaring__box")) {
               allBoxes[index].children[i].style.fontSize = "24rem";
             }
-            if (allBoxes[index].className.includes("progervaring")) {
+            if (allBoxes[index].className.includes("progervaring__box__box")) {
               allBoxes[index].children[i].style.fontSize = "21rem";
             }
-            if (allBoxes[index].className.includes("projecten")) {
+            if (allBoxes[index].className.includes("projecten__box")) {
               allBoxes[index].children[i].style.fontSize = "22rem";
             }
             if (allBoxes[index].className.includes("opleiding")) {
               allBoxes[index].children[i].style.fontSize = "20rem";
             }
-            if (allBoxes[index].className.includes("hobbys")) {
+            if (allBoxes[index].className.includes("hobbys__box")) {
               allBoxes[index].children[i].style.fontSize = "25rem";
             }
             allBoxes[index].children[i].style.opacity = "20%";

@@ -76,7 +76,9 @@ nav {
 .links {
   display: inline-block;
 }
-
+.content{
+  max-width: 80%;
+}
 /* BOX */
 .box:hover {
   transition: 0.4s;
