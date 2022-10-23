@@ -136,7 +136,9 @@
     }
   }
 
-  //aanmaken exit button
+  /**
+   * 
+   */
   function aanmakenExitBtn() {
     let imgExit = document.createElement("img");
     imgExit.src = "images/closeIcon.png";
@@ -162,7 +164,11 @@
     document.getElementsByClassName("btnExit ")[0].style.display = "block";
   }
 
-  //bereken van leeftijd op een doorgegeven datum
+  /**
+   * Calculate the percentage of the age of myself. based on the date of birth and the date of today.
+   * @param {*} birthDate date of birth
+   * @returns percentage of the age of myself between the current and the next age of myself.
+   */
   function calculateAge(birthDate) {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, "0");
