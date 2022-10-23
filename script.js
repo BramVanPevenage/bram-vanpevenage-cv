@@ -9,51 +9,20 @@
   // Event listeners
   window.addEventListener("load", () => {
     document.getElementsByClassName("age")[0].innerHTML = Math.floor(myAge);
-    document.getElementsByClassName("nextage")[0].innerHTML =
-      Math.floor(myAge) + 1;
+    document.getElementsByClassName("nextage")[0].innerHTML = Math.floor(myAge) + 1;
     aanmakenExitBtn();
-
-    //box clickListeners => TODO: maak een functie die dit doet met behulp van een forloop, die alle objecten in een array doorloopt. met zelfde class.
-    document
-      .getElementsByClassName("persoonlijk__box")[0]
-      .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("persoonlijk__box")[0]);
-      });
-    document
-      .getElementsByClassName("ervaring__box")[0]
-      .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("ervaring__box")[0]);
-      });
-    document
-      .getElementsByClassName("projecten__box")[0]
-      .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("projecten__box")[0]);
-      });
-    document
-      .getElementsByClassName("opleiding")[0]
-      .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("opleiding")[0]);
-      });
-    document
-      .getElementsByClassName("hobbys__box")[0]
-      .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("hobbys__box")[0]);
-      });
-    document.getElementsByClassName("taal__box")[0].addEventListener("click", () => {
-      selectBox(document.getElementsByClassName("taal__box")[0]);
+    document.getElementsByClassName("btnExit")[0].addEventListener("click", () => {
+      BackToHomeScreen();
+      document.getElementsByClassName("btnExit ")[0].style.display = "none";
     });
-    document
-      .getElementsByClassName("progervaring__box ")[0]
-      .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("progervaring__box ")[0]);
-      });
-    document
-      .getElementsByClassName("btnExit")[0]
-      .addEventListener("click", () => {
-        BackToHomeScreen();
-        document.getElementsByClassName("btnExit ")[0].style.display = "none";
-      });
     document.addEventListener("mouseover", hoverProgressBar);
+
+    //box clickListeners
+    for (const box of document.getElementsByClassName('box')) {
+      box.addEventListener("click", () => {
+        selectBox(box);
+      });
+    }
   });
 
   function selectBox(selectedBox) {
@@ -108,7 +77,7 @@
     zichtbaarBtnExit();
   }
 
-  //terug naar homeScreen
+  //terug naar homeScreen TODO: er is iets mis met de animatie, deze moet nog gefixt worden.
   function BackToHomeScreen() {
     for (let index = 0; index < allBoxes.length; index++) {
       if (allBoxes[index].style.width != "12rem") {
@@ -137,7 +106,7 @@
   }
 
   /**
-   * 
+   * Creating the exit button for the different boxes.
    */
   function aanmakenExitBtn() {
     let imgExit = document.createElement("img");
@@ -146,7 +115,6 @@
 
     let btnExit = document.createElement("div");
     btnExit.className = "btnExit button";
-
 
     btnExit.appendChild(imgExit);
     document.getElementsByTagName("main")[0].appendChild(btnExit);
