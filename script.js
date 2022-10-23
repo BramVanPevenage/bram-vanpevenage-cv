@@ -142,20 +142,12 @@
   function aanmakenExitBtn() {
     let imgExit = document.createElement("img");
     imgExit.src = "images/closeIcon.png";
-    let btnExit = document.createElement("div");
-    imgExit.style.padding = "0.8rem";
+    imgExit.className = "imgExit";
 
+    let btnExit = document.createElement("div");
     btnExit.className = "btnExit button";
-    imgExit.style.width = "3.5rem";
-    imgExit.style.height = "3.5rem";
-    btnExit.style.display = "none";
-    btnExit.style.border = "1px solid black";
-    btnExit.style.borderRadius = "50rem";
-    btnExit.style.position = "absolute";
-    btnExit.style.top = "90vh";
-    btnExit.style.right = "5vh";
-    btnExit.style.zIndex = "10";
-    btnExit.style.cursor = "pointer";
+
+
     btnExit.appendChild(imgExit);
     document.getElementsByTagName("main")[0].appendChild(btnExit);
   }

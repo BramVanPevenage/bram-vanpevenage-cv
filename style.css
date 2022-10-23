@@ -136,8 +136,14 @@ li {
   color: #fff;
   background-color: #4caf50;
   border: none;
-  border-radius: 15px;
+  border-radius: 50rem;
   box-shadow: 0 9px #000;
+  border: 1px solid black;
+  position: absolute;
+  top: 90vh;
+  right: 5vh;
+  z-index: 10;
+  display: none;
 }
 .btnExit:active {
   transition: 0ms;
@@ -148,6 +154,12 @@ li {
   transition: 1s;
   transform: rotate(180deg);
 }
+.imgExit{
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.8rem;
+}
+
 .box h2 {
   display: block;
 }
