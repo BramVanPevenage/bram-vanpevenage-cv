@@ -9,16 +9,19 @@
   // Event listeners
   window.addEventListener("load", () => {
     document.getElementsByClassName("age")[0].innerHTML = Math.floor(myAge);
-    document.getElementsByClassName("nextage")[0].innerHTML = Math.floor(myAge) + 1;
+    document.getElementsByClassName("nextage")[0].innerHTML =
+      Math.floor(myAge) + 1;
     aanmakenExitBtn();
-    document.getElementsByClassName("btnExit")[0].addEventListener("click", () => {
-      BackToHomeScreen();
-      document.getElementsByClassName("btnExit ")[0].style.display = "none";
-    });
+    document
+      .getElementsByClassName("btnExit")[0]
+      .addEventListener("click", () => {
+        BackToHomeScreen();
+        document.getElementsByClassName("btnExit ")[0].style.display = "none";
+      });
     document.addEventListener("mouseover", hoverProgressBar);
 
     //box clickListeners
-    for (const box of document.getElementsByClassName('box')) {
+    for (const box of document.getElementsByClassName("box")) {
       box.addEventListener("click", () => {
         selectBox(box);
       });
@@ -163,12 +166,12 @@
       tooltip.style.opacity = "0";
     }
   }
-/**
- * Function to round a specifique number to a certain decimal.
- * @param {number} value the value to round
- * @param {number} decimals round to this many decimals
- * @returns the rounded value
- */
+  /**
+   * Function to round a specifique number to a certain decimal.
+   * @param {number} value the value to round
+   * @param {number} decimals round to this many decimals
+   * @returns the rounded value
+   */
   function round(value, decimals) {
     return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
   }
