@@ -43,9 +43,9 @@
       selectBox(document.getElementsByClassName("taal__box")[0]);
     });
     document
-      .getElementsByClassName("progervaring__box__box ")[0]
+      .getElementsByClassName("progervaring__box ")[0]
       .addEventListener("click", () => {
-        selectBox(document.getElementsByClassName("progervaring__box__box ")[0]);
+        selectBox(document.getElementsByClassName("progervaring__box ")[0]);
       });
     document
       .getElementsByClassName("btnExit")[0]
@@ -55,10 +55,6 @@
       });
     document.addEventListener("mouseover", hoverProgressBar);
   });
-
-  //functies
-
-  //verwijderen van alle boxes tonen van inhoud van geselecteerde box, exit button aanmaken
 
   function selectBox(selectedBox) {
     selectedBox.style.backgroundColor = "blue";
@@ -108,7 +104,7 @@
       }
     }
 
-    //zichtbaar maken bntExit
+    //zichtbaar maken bntExit => telkens als er een box geselecteerd wordt
     zichtbaarBtnExit();
   }
 
@@ -192,16 +188,21 @@
     let x = e.clientX;
     let y = e.clientY;
 
-    if (element.id == "myAgeProgress" || element.id == "myBar") {
+    if (element.className == "myAgeProgress" || element.id == "myBar") {
       tooltip.style.top = y - 20 + window.scrollY + "px";
       tooltip.style.left = x + 15 + "px";
       tooltip.innerHTML = round(procentNextAge.replace("%", ""), 2) + "%";
-      tooltip.style.opacity = "100";
+      tooltip.style.opacity = "80";
     } else if (element.id !== "myAgeProgress" || element.id !== "myBar") {
       tooltip.style.opacity = "0";
     }
   }
-
+/**
+ * Function to round a specifique number to a certain decimal.
+ * @param {number} value the value to round
+ * @param {number} decimals round to this many decimals
+ * @returns the rounded value
+ */
   function round(value, decimals) {
     return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
   }
