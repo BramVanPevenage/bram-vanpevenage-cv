@@ -49,7 +49,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload build output client folder
+          # Upload build output client folder (server output is only
+          # needed at build time; the deployed static assets live here)
           path: './dist/client'
 
       - name: Deploy to GitHub Pages
