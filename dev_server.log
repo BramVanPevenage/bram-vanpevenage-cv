@@ -2,18 +2,18 @@
 > web-cv@1.0.0 dev
 > astro dev
 
-07:04:55 [@astrojs/node] Enabling sessions with filesystem storage
-07:04:55 [vite] connected.
-07:04:57 [types] Generated 1ms
-07:04:57 [vite] connected.
-07:04:58 [content] Syncing content
-07:04:58 [content] Synced content
-07:04:58 [vite] Re-optimizing dependencies because vite config has changed
- astro  v7.1.1 ready in 4192 ms
-┃ Local    http://127.0.0.1:4321/
-07:04:58 watching for file changes...
-07:04:59 [vite] [optimizer] bundling dependencies...
-07:05:10 [200] HEAD / 189ms
-07:05:10 [200] HEAD /cv.md 2ms
-07:05:23 [200] /cv.md 2ms
-07:06:14 [200] / 75ms
+03:57:46 [@astrojs/node] Enabling sessions with filesystem storage
+03:57:46 [vite] connected.
+03:57:48 [types] Generated 1ms
+03:57:48 [vite] connected.
+03:57:49 [content] Syncing content
+03:57:49 [content] Synced content
+03:57:49 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v7.1.1 ready in 3696 ms
+┃ Local    http://127.0.0.1:4321/WebCv/
+03:57:49 watching for file changes...
+03:57:50 [vite] [optimizer] bundling dependencies...
+03:59:39 [200] / 216ms
+03:59:40 [200] / 8ms
+03:59:41 [200] /cv.md 2ms
+03:59:43 [200] / 6ms
