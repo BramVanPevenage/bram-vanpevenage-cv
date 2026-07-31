@@ -1,10 +1,10 @@
 {
-  "name": "Bram Van Pevenage",
+  "name": "John Doe",
   "title": "Software Engineer",
-  "summary": "Lorem ipsum",
-  "email": "bramvan.pevenage@gmail.com",
-  "phone": "+32 483 61 63 37",
-  "location": "Belgium",
-  "github": "https://github.com/bramvanpevenage",
-  "linkedin": "https://www.linkedin.com/in/bramvanpevenage/"
+  "summary": "Experienced software engineer specializing in building modern web applications. Proficient in TypeScript, React, and various frontend/backend technologies. Passionate about writing clean, maintainable, and well-tested code.",
+  "email": "john.doe@example.com",
+  "phone": "+123 456 7890",
+  "location": "City, Country",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://www.linkedin.com/in/yourusername/"
 }
