@@ -14,7 +14,7 @@ export default defineConfig({
   // is never part of the deployed site.
   integrations: [react(), markdoc(), keystatic()],
   site: 'https://bramvanpevenage.github.io',
-  base: '/WebCv/',
+  base: '/bram-vanpevenage-cv/',
   output: 'server',
   adapter: node({
     mode: 'standalone',
