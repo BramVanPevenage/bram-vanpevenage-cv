@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import markdoc from '@astrojs/markdoc';
-import tailwind from '@astrojs/tailwind';
 import keystatic from '@keystatic/astro';
 import node from '@astrojs/node';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,11 +12,14 @@ export default defineConfig({
   // workflow deploys just `dist/client` (the prerendered static pages),
   // so Keystatic is only ever reachable locally via `npm run dev` and
   // is never part of the deployed site.
-  integrations: [react(), markdoc(), tailwind(), keystatic()],
+  integrations: [react(), markdoc(), keystatic()],
   site: 'https://bramvanpevenage.github.io',
   base: '/WebCv/',
   output: 'server',
   adapter: node({
     mode: 'standalone',
   }),
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
