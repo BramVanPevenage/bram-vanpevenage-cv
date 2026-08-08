@@ -59,21 +59,33 @@ const siteUrl = `${Astro.site ?? ''}${base}`.replace(/\/{2,}$/, '/');
       })();
     </script>
   </head>
-  <body class="min-h-screen bg-cream-50 text-ink-900 transition-colors duration-300 dark:bg-navy-950 dark:text-cream-100">
-    <button
-      id="theme-toggle"
-      type="button"
-      aria-label="Toggle dark mode"
-      class="fixed right-4 top-4 z-50 flex h-9 w-9 items-center justify-center rounded-full border border-navy-800/20 bg-cream-50/80 text-ink-900 shadow-sm backdrop-blur transition-colors hover:border-gold-500 dark:border-cream-100/20 dark:bg-navy-950/80 dark:text-cream-100"
-    >
-      <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="hidden h-4 w-4 dark:block">
-        <circle cx="12" cy="12" r="4" />
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-      </svg>
-      <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-4 w-4 dark:hidden">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
-      </svg>
-    </button>
+  <body class="bg-paper min-h-screen bg-cream-50 text-ink-900 transition-colors duration-300 dark:bg-navy-950 dark:text-cream-100">
+    <div data-no-print class="fixed right-4 top-4 z-50 flex items-center gap-2">
+      <button
+        id="print-button"
+        type="button"
+        aria-label="Print or save as PDF"
+        class="flex h-9 w-9 items-center justify-center rounded-full border border-navy-800/20 bg-cream-50/80 text-ink-900 shadow-sm backdrop-blur transition-colors hover:border-gold-500 dark:border-cream-100/20 dark:bg-navy-950/80 dark:text-cream-100"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-4 w-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v8H6v-8z" />
+        </svg>
+      </button>
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        class="flex h-9 w-9 items-center justify-center rounded-full border border-navy-800/20 bg-cream-50/80 text-ink-900 shadow-sm backdrop-blur transition-colors hover:border-gold-500 dark:border-cream-100/20 dark:bg-navy-950/80 dark:text-cream-100"
+      >
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="hidden h-4 w-4 dark:block">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+        </svg>
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" class="h-4 w-4 dark:hidden">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+        </svg>
+      </button>
+    </div>
 
     <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
       <slot />
@@ -85,6 +97,7 @@ const siteUrl = `${Astro.site ?? ''}${base}`.replace(/\/{2,}$/, '/');
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
       });
+      document.getElementById('print-button')?.addEventListener('click', () => window.print());
     </script>
   </body>
 </html>
